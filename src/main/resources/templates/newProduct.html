@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Новый товар</title>
+</head>
+<body>
+<h2> Карточка добавления нового товара</h2>
+
+<div >
+  <form action="/saveProduct">
+    <p> </p>
+  <p> id товара </p>
+    <p>  <input type="text" name="id"/>
+  </p>
+  <p> </p>
+  <p> название товара </p>
+  <p>
+    <input type="text" name="name"/>
+  </p>
+
+  <p> </p>
+  <p> стоимость </p>
+    <p>
+    <input type="text" name="cost"/>
+  </p>
+    <p> </p>
+
+  <p>
+    <button type="submit" title="Добавить">SAVE</button>
+    <button type="submit" formaction="/catalog">Отменить</button>
+  </p>
+
+  </form>
+
+</div>
+
+<p>
+  <a href="index.html">homePage</a>
+</p>
+
+</body>
+</html>

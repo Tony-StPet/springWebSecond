@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Страница поиска</title>
+</head>
+<body>
+<p> вы ввели</p>
+
+<div th:if="${product != null and !#strings.isEmpty(product.id)}">
+
+    <p> найден товар!</p>
+    <p>
+        Название: <span th:text="${product.name}"/> </p>
+
+    <p>цена: <span th:text="${product.cost}"/> </p>
+
+</div>
+<div th:if="${product.id ==null and #strings.isEmpty(product.id)}" >
+
+    <p> ничего не найдено </p>
+
+</div>
+<p>
+    <a href="index.html">homePage</a>
+</p>
+</body>
+</html>

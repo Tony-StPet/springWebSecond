@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Каталог</title>
+</head>
+<body>
+<h4> Поиск</h4>
+<div>
+    <p> введите название товара для поиска </p>
+    <form action="/findPage">
+        <input type="text" name="s"/>
+        <button type="submit" >Найти</button>
+    </form>
+</div>
+<h3> Ассортимент</h3>
+
+<div th:each="product : ${spisok_prod}">
+    <p>
+        Название: <span th:text="${product.name}"/>
+        цена: <span th:text="${product.cost}"/>
+    </p>
+</div>
+
+<p>
+    <a href="/newProduct">добавить новый товар</a>
+</p>
+<p>
+    <a href="index.html">homePage</a>
+</p>
+</body>
+</html>
